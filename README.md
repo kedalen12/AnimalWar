@@ -1,20 +1,14 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# ANIMAL WAR
+### _Casual multiplayer mobalike game._
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+[![N|Solid](https://i.imgur.com/sJ3a6kb.png)](https://unity.com)
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Animal war is a casual multiplatform game with traits similar to games like League or Smite.
+It was designed and created by a group of 5 [Escola Sant Marc](https://support.west-wind.com) students.
+| Name | Position |
+| ------ | ------ |
+| [Kevin Esteve](https://www.linkedin.com/in/kevin-esteve/) | **Textures and Organic Modeling** |
+| [Pol Bertran](https://www.linkedin.com/in/pol-bertran-valero-0936a1171/)  | **3D Hard Surface** |
+| [Guillem Rossi](https://www.artstation.com/chulikk) |**Textures and Organic Modeling** |
+| [Ruben Ventura](https://www.linkedin.com/in/ruben-ventura-suarez/) | **Rigging and Animation** |
+| [Oriol Pujol](https://www.linkedin.com/in/opujolgd/) | **Coding** |
