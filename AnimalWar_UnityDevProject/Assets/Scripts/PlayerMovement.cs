@@ -116,29 +116,10 @@ public class PlayerMovement : MonoBehaviour
 
  private void ApplyCharacterMovement()
  {
-
-
   var velocity = transform.forward * _currentSpeed + Vector3.up * _currentYVelocity;
   playerController.Move(velocity * Time.deltaTime);
  }
-
- /*private void SetAnimationValue(string valueName, bool value)
- {
-  characterAnimator.SetBool(valueName, value);
-
- }
-
- private void SetAnimationValue(string valueName, int value)
- {
-  characterAnimator.SetInteger(valueName, value);
-
- }
-
- private void SetAnimationValue(string valueName, float value)
- {
-  characterAnimator.SetFloat(valueName, value, speedSmoothDuration, Time.deltaTime);
- }
-*/
+ 
  private float GetModifiedSmoothTime(float smoothTime)
  {
   if (playerController.isGrounded)
@@ -169,5 +150,21 @@ public class PlayerMovement : MonoBehaviour
  public void SetDeathState()
  {
   isDead = !isDead;
+ }
+
+ private void ResetSpeed()
+ {
+  
+ }
+ public void Slow(int percentage)
+ {
+  if (percentage != 0)
+  {
+   _currentSpeed *= percentage / 0b1100100;
+  }
+  else
+  {
+   _currentSpeed = 5;
+  }
  }
 }

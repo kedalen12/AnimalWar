@@ -63,38 +63,46 @@ public class Panda : MonoBehaviour
         await Task.Delay(delay * 1000);
         SetAvailable("shield");
     }
-    
+
+    /*ORDER PRIORITY
+     SHIELD - PUNCH - JUMPING - MOVING - EMOTE */
+    private void CheckInputs(){
+        if (_shieldAvailable)
+        {
+            if (Input.GetMouseButtonDown(1) && _shieldAvailable)
+            {
+                //SHIELD
+                Task.Run(() => SetCoolDownShield(12));
+                _shieldAvailable = false;
+                myStats.hasShield = true;
+                UseShield();
+            }
+        }
+        if (Input.GetKeyDown(Bindings.PlayerBinds.jump))
+        {
+            Jump();
+        }
+        if (!_jumping)
+        {
+            if (Input.GetKey(Bindings.PlayerBinds.forward) || Input.GetKey(Bindings.PlayerBinds.backwards) ||
+                Input.GetKey(Bindings.PlayerBinds.left) || Input.GetKey(Bindings.PlayerBinds.right))
+            {
+                Run();
+            }
+            else
+            {
+                pandaAnimator.enabled = false;
+                pandaAnimator.enabled = true;
+            }
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Punch();
+        }
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(Bindings.PlayerBinds.ability) && _shieldAvailable)
-                {
-                    Task.Run(() => SetCoolDownShield(12));
-                    _shieldAvailable = false;
-                    myStats.hasShield = true;
-                    UseShield();
-                }
-
-                if (!_jumping)
-                {
-                    if (Input.GetKey(Bindings.PlayerBinds.forward) || Input.GetKey(Bindings.PlayerBinds.backwards) ||
-                        Input.GetKey(Bindings.PlayerBinds.left) || Input.GetKey(Bindings.PlayerBinds.right))
-                    {
-                        Run();
-                    }
-
-                    if (!shield.activeSelf)
-                    {
-                        if (Input.GetMouseButtonDown(0))
-                        {
-                            Punch();
-                        }
-                    }
-                }
-
-                if (shield.activeSelf) return;
-                if (!Input.GetKeyDown(Bindings.PlayerBinds.jump)) return;
-                _jumping = true;
-                Jump();
+        CheckInputs();
     }
 
 
@@ -105,6 +113,7 @@ public class Panda : MonoBehaviour
     }
     private void Jump()
     {
+        _jumping = true;
         pandaAnimator.Play("Jump");
     }
     private void OnDrawGizmosSelected()
@@ -112,8 +121,11 @@ public class Panda : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackSpawner.position, attackRadius);
     }
+
+    private bool isPunching = false;
     private void Punch()
     {
+        isPunching = true;
         pandaAnimator.Play("Punch");
     }
     public void CheckDamage()
@@ -159,7 +171,7 @@ public class Panda : MonoBehaviour
     public void EndShield()
     {
         myStats.hasShield = false;
-
+        myMovement.Slow(0);
         shield.SetActive(false);
     }
 }

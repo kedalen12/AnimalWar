@@ -257,7 +257,7 @@ public class Client
         form.AddField("pass",pass);
         var www = new WWW(Constants.SqlNameServer + "login.php",form);
         yield return www;
-        if (www.text[0] == '0' && !Dictionaries.dictionaries.PlayersByName.ContainsKey(user)) //AVOID THE SAME USER FROM LOGIN IN TWICE
+        if (!string.IsNullOrEmpty(www.text) && www.text[0] == '0' && !Dictionaries.dictionaries.PlayersByName.ContainsKey(user)) //AVOID THE SAME USER FROM LOGIN IN TWICE
         {
             //Allow Login
             Dictionaries.dictionaries.PlayersByName.Add(user,id);

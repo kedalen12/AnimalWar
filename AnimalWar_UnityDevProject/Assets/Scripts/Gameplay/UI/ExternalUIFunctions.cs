@@ -190,9 +190,11 @@ public class ExternalUIFunctions : MonoBehaviour
                
         }
 
+        if (UIObjects.Instance.loadingBarImage_Login == null) return;
         UIObjects.Instance.loadingBarImage_Login.fillAmount += 0.005f;
         if (!(Math.Abs(UIObjects.Instance.loadingBarImage_Login.fillAmount - 1f) < 0.01f)) return;
-        UIObjects.Instance.loadingBarImage_Login.fillClockwise = !UIObjects.Instance.loadingBarImage_Login.fillClockwise;
+        UIObjects.Instance.loadingBarImage_Login.fillClockwise =
+            !UIObjects.Instance.loadingBarImage_Login.fillClockwise;
         UIObjects.Instance.loadingBarImage_Login.fillAmount = 0;
     }
 

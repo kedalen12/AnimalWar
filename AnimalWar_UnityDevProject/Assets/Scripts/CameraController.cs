@@ -23,20 +23,22 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;    
+        Cursor.visible = false;     
     }
 
     private void Update()
     {
-        // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
-        while (Input.GetKey(KeyCode.LeftAlt))
+        if (Input.GetMouseButtonDown(0) && Cursor.lockState != CursorLockMode.Locked)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            break;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false; 
         }
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;   
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        } 
+        // ReSharper disable once Unity.PerformanceCriticalCodeNullComparison
         if (target == null)
         {
             SearchTarget();
@@ -68,9 +70,6 @@ public class CameraController : MonoBehaviour
     private void LateUpdate()
     {
         if(target == null) return;
-     
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         GetYawAndPitch();
         _currentRotation = Vector3.SmoothDamp(_currentRotation, new Vector3(_pitch, _yaw), ref _rotationSmoothVelocity, rotationSmoothTime);
         //targetRotation = new Vector3(_pitch, _yaw);
