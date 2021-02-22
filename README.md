@@ -4,7 +4,7 @@
 [![N|Solid](https://i.imgur.com/sJ3a6kb.png)](https://unity.com)
 
 Animal war is a casual multiplatform game with traits similar to games like League or Smite.
-It was designed and created by a group of 5 [Escola Sant Marc](https://support.west-wind.com) students.
+It was designed and created by a group of 5 [Escola Sant Marc](https://www.santmarc.com) students.
 | Name | Position |
 | ------ | ------ |
 | [Kevin Esteve](https://www.linkedin.com/in/kevin-esteve/) | **Textures and Organic Modeling** |
