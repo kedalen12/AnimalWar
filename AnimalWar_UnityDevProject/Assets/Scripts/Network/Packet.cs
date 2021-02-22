@@ -228,6 +228,7 @@ namespace Network
         /// <param name="_value">The string to add.</param>
         public void Write(string _value)
         {
+            if(string.IsNullOrEmpty(_value)) return;
             Write(_value.Length); // Add the length of the string to the packet
             buffer.AddRange(Encoding.ASCII.GetBytes(_value)); // Add the string itself
         }

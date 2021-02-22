@@ -43,12 +43,14 @@ public class PlayerMovement : MonoBehaviour
   isGravityEnabled = !isGravityEnabled;
  }
 
+ public bool canMove = true;
 
  #region LOCALINPUTS
 
 // ReSharper disable Unity.PerformanceAnalysis
  private void Update()
  {
+  if(!canMove) return;
   if (isDead)
   {
     Move(Vector2.zero);
@@ -100,6 +102,10 @@ public class PlayerMovement : MonoBehaviour
 
  private void SetCharacterRotation()
  {
+  if (_camaraTransform == null)
+  {
+   if (!(Camera.main is null)) _camaraTransform = Camera.main.transform;
+  }
   float targetRotation = (Mathf.Atan2(_inputDir.x, _inputDir.y) * Mathf.Rad2Deg + _camaraTransform.eulerAngles.y);
   transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation,
    ref _rotationSmoothVelocity, GetModifiedSmoothTime(rotationSmoothDuration));

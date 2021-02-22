@@ -64,7 +64,11 @@ public class TabGroup : MonoBehaviour
         button.background.sprite = tabSelected;
         if (isOption) return;
         int index = button.transform.GetSiblingIndex();
-        objectsToSwap[index].SetActive(true);
+        if (objectsToSwap.Count > 0)
+        {
+            objectsToSwap[index].SetActive(true);
+        }
+
         for (int i = 0; i < objectsToSwap.Count; i++)
         {
             if (i != index)

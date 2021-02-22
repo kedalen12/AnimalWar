@@ -301,7 +301,6 @@ public class ClientHandle
     public static void UpdateTutorialState(Packet _packet)
     {
         var newStage = _packet.ReadInt();
-        TutorialManager.Instance.UpdateCurrentStage(newStage);
     }
 
     public static void LoadSceneForce(Packet _packet)

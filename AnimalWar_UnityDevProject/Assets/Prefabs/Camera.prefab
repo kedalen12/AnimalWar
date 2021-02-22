@@ -134,6 +134,6 @@ MonoBehaviour:
   target: {fileID: 0}
   dstToTarget: 10
   minY: -5
-  maxY: 90
+  maxY: 85
   zoomSensitivity: 1
   rotationSmoothTime: 0.12

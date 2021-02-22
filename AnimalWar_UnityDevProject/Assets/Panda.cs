@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Network;
 using Player;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class Panda : MonoBehaviour
 {
@@ -14,23 +16,40 @@ public class Panda : MonoBehaviour
     public Transform attackSpawner;
     public float attackRadius;
     public LayerMask attackLayer;
+    public SkinnedMeshRenderer bodyRenderPanda;
     public int punchDamage = 100;
     private bool _jumping = false;
     public PlayerMovement myMovement;
     public HandlePlayerStats myStats;
     private bool _shieldAvailable = true;
-    private bool _ultimateAvailable = true;
+    public bool _ultimateAvailable = true;
     public MoveTarget myTarget;
     private Task endUltimate;
     CancellationTokenSource source = new CancellationTokenSource();
     private CancellationToken removeEndUltimateCall;
+    //public Transform centerOfGfx;
     private bool UsingUltimate = false;
     private Vector3 ultimateTarget;
     public GameObject gfx;
-    public GameObject bamboo;
+    public GameObject fakeBamboo;
+    public GameObject selfBamboo;
+    public bool bambooIsActive = true;
     private Vector3 lastPosToSnap;
-    
+    private Vector3 currentUltTarget;
+    private bool isInUlti = false;
 
+    public void DeleteBamboo()
+    {
+        fakeBamboo.SetActive(false);
+        selfBamboo.SetActive(true);
+    }
+
+    public void ActivateBamboo()
+    {
+        fakeBamboo.SetActive(true);
+        selfBamboo.SetActive(false);
+
+    }
     private void Awake()
     {
         removeEndUltimateCall = source.Token;
@@ -64,72 +83,211 @@ public class Panda : MonoBehaviour
         SetAvailable("shield");
     }
 
+    IEnumerator SnapToParent()
+    {
+        yield return new WaitForEndOfFrame();
+        //gfx.transform.position = new Vector3(0, 0, 0);
+        pandaAnimator.SetInteger("UltiState", -1);
+    }
+
+    public void SnapIf()
+    {
+        //pandaAnimator.enabled = !(Vector3.Distance(gfx.transform.localPosition, new Vector3(0,0,0)) >= 0.5f);
+    }
+
+    public void CallOnIdle()
+    {
+       Debug.Log("My Code");
+    }
+
+    private void OnAnimatorMove()
+    {
+
+    }
+
+    public IEnumerator SnapBack()
+    {
+        _ultimateAvailable = false;
+        bambooIsActive = true;
+        gfx.transform.eulerAngles = Vector3.zero;
+        gfx.transform.rotation = new Quaternion(0,0,0,0);
+        gfx.transform.localRotation = new Quaternion(0,0,0,0);
+        gfx.transform.localEulerAngles = Vector3.zero;
+        myMovement.gameObject.transform.SetParent(transform);
+        isInUlti = false;
+        pandaAnimator.SetInteger("UltiState", -1);
+        transform.position = gfx.transform.position;
+        gfx.transform.rotation = new Quaternion(0, 0, 0, 0);
+        gfx.transform.eulerAngles = new Vector3(0, 0, 0);
+        yield return new WaitForSecondsRealtime(.3f);
+        gfx.transform.SetParent(transform);
+        gfx.transform.eulerAngles = Vector3.zero;
+        gfx.transform.rotation = new Quaternion(0,0,0,0);
+        gfx.transform.localRotation = new Quaternion(0,0,0,0);
+        gfx.transform.localEulerAngles = Vector3.zero;  
+        myMovement.canMove = true;
+
+        //pandaAnimator.enabled = true;
+
+        //bodyRenderPanda.gameObject.SetActive(true);
+
+        //bodyRenderPanda.enabled = true;
+        /*Debug.Log("SON NOW !");
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        gfx.transform.localPosition = Vector3.zero;*/
+
+        //StartCoroutine(SnapToParent());
+        /* pandaAnimator.enabled = false;
+         gfx.transform.SetParent(transform);
+         myTarget.gameObject.transform.SetParent(transform);
+         myTarget.Active = false;*/
+        // StartCoroutine(SnapToParent());
+    }
+    
     /*ORDER PRIORITY
      SHIELD - PUNCH - JUMPING - MOVING - EMOTE */
-    private void CheckInputs(){
-        if (_shieldAvailable)
+    private void CheckInputs()
+    {
+        Debug.Log(_isPunching);
+        /*gfx.transform.position = transform.position;
+        gfx.transform.rotation = transform.rotation;
+        gfx.transform.eulerAngles = transform.eulerAngles;*/
+        pandaAnimator.SetBool("Jump", false);
+        //pandaAnimator.SetBool("Punch", false);
+        //pandaAnimator.SetBool("PunchInv", false);
+        pandaAnimator.SetBool("Shield", false);
+
+        if (!isInUlti)
         {
-            if (Input.GetMouseButtonDown(1) && _shieldAvailable)
+            if (Input.GetKeyDown(KeyCode.P))
             {
-                //SHIELD
-                Task.Run(() => SetCoolDownShield(12));
-                _shieldAvailable = false;
-                myStats.hasShield = true;
-                UseShield();
+                //myTarget.Active = true;
+                UseUltimate();
+            }
+
+            if (!pandaAnimator.GetBool("Run") && Input.GetKeyDown(KeyCode.K))
+            {
+                pandaAnimator.SetBool("DoEmote", true);
+            }
+
+            if (_shieldAvailable)
+            {
+                if (Input.GetMouseButtonDown(1) && _shieldAvailable)
+                {
+                    //SHIELD
+                    Task.Run(() => SetCoolDownShield(12));
+                    _shieldAvailable = false;
+                    myStats.hasShield = true;
+                    UseShield();
+                }
+            }
+
+            if (Input.GetKeyDown(Bindings.PlayerBinds.jump) && pandaAnimator.GetBool("Run"))
+            {
+                Jump();
+            }
+
+            if (!_jumping)
+            {
+                if (Input.GetKey(Bindings.PlayerBinds.forward) || Input.GetKey(Bindings.PlayerBinds.backwards) ||
+                    Input.GetKey(Bindings.PlayerBinds.left) || Input.GetKey(Bindings.PlayerBinds.right))
+                {
+                    pandaAnimator.SetBool("DoEmote", false);
+                    Run(true);
+                }
+
+                if (Input.GetKeyUp(Bindings.PlayerBinds.forward) || Input.GetKeyUp(Bindings.PlayerBinds.backwards) ||
+                    Input.GetKeyUp(Bindings.PlayerBinds.left) || Input.GetKeyUp(Bindings.PlayerBinds.right))
+                {
+                    Run(false);
+                }
             }
         }
-        if (Input.GetKeyDown(Bindings.PlayerBinds.jump))
+
+        if (Input.GetMouseButtonDown(0))
         {
-            Jump();
-        }
-        if (!_jumping)
-        {
-            if (Input.GetKey(Bindings.PlayerBinds.forward) || Input.GetKey(Bindings.PlayerBinds.backwards) ||
-                Input.GetKey(Bindings.PlayerBinds.left) || Input.GetKey(Bindings.PlayerBinds.right))
+            if (isInUlti && myTarget.Active)
             {
-                Run();
+                ActivateBamboo();
+
+                ultimateTarget = myTarget.currentPos;
+                myTarget.Active = false;
+                gfx.transform.SetParent(null);
+                myTarget.gameObject.transform.SetParent(null);
+                /*UWU :)*/
+                Vector3 D = ultimateTarget - gfx.transform.position;
+                // calculate the Quaternion for the rotation
+                Quaternion rot = Quaternion.Slerp(gfx.transform.rotation, Quaternion.LookRotation(D),
+                    360 * Time.deltaTime);
+                //Apply the rotation 
+                gfx.transform.rotation = rot;
+                // put 0 on the axys you do not want for the rotation object to rotate
+                gfx.transform.eulerAngles = new Vector3(0, gfx.transform.eulerAngles.y, 0);
+                
+                pandaAnimator.SetInteger("UltiState", 1);
+                
             }
             else
             {
-                pandaAnimator.enabled = false;
-                pandaAnimator.enabled = true;
+                Punch();
             }
         }
-        if (Input.GetMouseButtonDown(0))
-        {
-            Punch();
-        }
     }
+
+    private void UseUltimate()
+    {
+        isInUlti = true;
+        myMovement.canMove = false; 
+        pandaAnimator.SetInteger("UltiState", 0);
+    }
+
+    //public bool goToParent = false;
     private void Update()
     {
+        /*if (gfx.transform.parent != transform && !bambooIsActive)
+        {
+            transform.position = gfx.transform.position;
+        }*/
+
+        if (isInUlti && !myTarget.Active && !bambooIsActive)
+        {
+            transform.position = ultimateTarget;
+        }
+
         CheckInputs();
     }
 
 
-
-    private void Run()
+    private void Run(bool value)
     {
-        pandaAnimator.Play("Run");
+        pandaAnimator.SetBool("Run", value);
     }
+
     private void Jump()
     {
-        _jumping = true;
-        pandaAnimator.Play("Jump");
+        pandaAnimator.SetBool("Jump", true);
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackSpawner.position, attackRadius);
     }
 
-    private bool isPunching = false;
+    private bool _isPunching;
     private void Punch()
     {
-        isPunching = true;
-        pandaAnimator.Play("Punch");
+        if(_isPunching) return;
+        var what = Random.Range(0, 101);
+        pandaAnimator.SetBool("Punch" , true);
+        _isPunching = true;
     }
+
     public void CheckDamage()
     {
+        pandaAnimator.SetBool("Punch", false);
+        pandaAnimator.SetBool("PunchInv", false);
         var players = new List<int>();
         var targets = Physics.OverlapSphere(attackSpawner.position, attackRadius, attackLayer);
         foreach (var target in targets)
@@ -143,35 +301,44 @@ public class Panda : MonoBehaviour
                         TutorialManager.Instance.ShowAlertText(
                             "Do not attack the enemy while its protective shield is active!");
                     else
-                        TutorialManager.Instance.NewStage();
+                        TutorialManager.Instance.UpdateStage(TutorialStage.Attack);
                 }
             }
-            else if(target.gameObject.GetComponent<HandlePlayerStats>() && target.CompareTag("EPlayer"))
+            else if (target.gameObject.GetComponent<HandlePlayerStats>() && target.CompareTag("EPlayer"))
             {
-                players.Add( target.gameObject.GetComponent<HandlePlayerStats>().PlayerId);
+                players.Add(target.gameObject.GetComponent<HandlePlayerStats>().PlayerId);
             }
         }
 
         if (players.Count != 0)
         {
-            ClientSend.DamageDealt(players, punchDamage); 
+            //ClientSend.DamageDealt(players, punchDamage); 
         }
+        _isPunching = false;
+
         Debug.Log("Checking...");
-
     }
-    public void UseShield()
-    {
 
+    private void UseShield()
+    {
+        pandaAnimator.SetBool("Shield", true);
         shield.SetActive(true);
     }
+
     public void AllowJump()
     {
         _jumping = false;
     }
+
     public void EndShield()
     {
         myStats.hasShield = false;
         myMovement.Slow(0);
         shield.SetActive(false);
+    }
+
+    public void UpdatePhase(int value)
+    {
+        myTarget.Active = true;
     }
 }

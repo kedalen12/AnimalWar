@@ -35,9 +35,9 @@ public class HandlePlayerStats : MonoBehaviour
     public void UpdateHealth(float value)
     {
         if (!isTutorial)
-       {
+        {
             CurrentHp = value;
-       }
+        }
         else
         {
             CurrentHp -= value;

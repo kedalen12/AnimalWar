@@ -26,8 +26,6 @@ public class DummyLoop : MonoBehaviour
         }
         else
         {
-      
-
             InvokeRepeating("DefenseLoop", 1, 4f);
         }
     }
@@ -44,7 +42,6 @@ public class DummyLoop : MonoBehaviour
     private void Update()
     {
         if (!(Vector3.Distance(player.transform.position, transform.position) <= Radius)) return;
-        TutorialManager.Instance.UpdateCurrentStage();
      
     }
 
@@ -65,15 +62,16 @@ public class ColliderDummyCallBack : MonoBehaviour
     {
         if (other.CompareTag("LPlayer"))
         {
-           if (other.GetComponent<Panda>().shield.activeSelf)
+            if (other.GetComponent<Panda>().shield.activeSelf)
             {
-                TutorialManager.Instance.DummiesDone();
+                TutorialManager.Instance.UpdateStage(TutorialStage.Ultimate);
             }
             else
             {
+                TutorialManager.Instance.ShowAlertText("Press LMB to use shield!");
                 other.GetComponent<HandlePlayerStats>().UpdateHealth(100);
-                TutorialManager.Instance.ShowAlertText("Be careful you are taking damage fall back! And press RMB to shield yourself");
             }
+            
         }
     }
 }

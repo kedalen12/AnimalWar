@@ -5,13 +5,6 @@ using UnityEngine;
 
 public class TargetCall : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "LPlayer")
-        {
-            TutorialManager.Instance.LastStage();
-        }
-    }
 
     private void OnTriggerExit(Collider other)
     {

@@ -18,6 +18,7 @@ public class LookForGame : MonoBehaviour
     public void StartLfGame(int mapId)
     {
         ClientSend.AddMatchMaking(mapId);
+        UIObjects.Instance.PlaySelector.SetActive(false);
     }
     public static void SetFGButtons()
     {

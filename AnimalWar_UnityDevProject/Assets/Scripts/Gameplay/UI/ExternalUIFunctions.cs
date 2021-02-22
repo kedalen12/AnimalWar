@@ -124,6 +124,7 @@ public class ExternalUIFunctions : MonoBehaviour
     }
     public static void GoToSceneStatic(int x)
     {
+        GameManager.Instance.musicSource.enabled = false;
         UIObjects.Instance.inGameUi.SetActive(false);
         SceneManager.LoadScene(x, LoadSceneMode.Single);
     }

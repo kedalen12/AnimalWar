@@ -215,8 +215,11 @@ public class HandleAsync : MonoBehaviour
             }
         }
     }
+
+
     public IEnumerator GetFriends()
     {
+        yield break;
         var form = new WWWForm();
         form.AddField("user", Constants.Username);
         using (var www = UnityWebRequest.Post(Constants.WebServer + "getfriends.php", form))

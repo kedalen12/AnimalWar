@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     private float _yaw;
     private float _pitch;
     public Transform target;
-    [Range(0f, 20f)]
+    [Range(2f, 8f)]
     public float dstToTarget;
     public float minY = -1;
     public float maxY = 15;
@@ -57,7 +57,7 @@ public class CameraController : MonoBehaviour
                 dstToTarget -= zoomSensitivity;
             }
 
-            dstToTarget = Mathf.Clamp(dstToTarget, 1f, 20f);
+            dstToTarget = Mathf.Clamp(dstToTarget, 2f, 8f);
         }
 
     }
