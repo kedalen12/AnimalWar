@@ -107,6 +107,28 @@ namespace Network
                 SendTcpData(packet);
             }
         }
+        public static void SendAnimation(int animation, bool tranform, Quaternion rotation)
+        {
+            using (var packet = new Packet((int) ClientPackets.receiveAnimation))
+            {
+                packet.Write(MatchVariables.MatchId);
+                packet.Write(animation);
+                packet.Write(tranform);
+                packet.Write(rotation);
+                SendUdpData(packet);
+            }
+        }
+        public static void SendAnimation(int animation, bool tranform)
+        {
+            using (var packet = new Packet((int) ClientPackets.receiveAnimation))
+            {
+                packet.Write(MatchVariables.MatchId);
+                packet.Write(animation);
+                packet.Write(tranform);
+    
+                SendUdpData(packet);
+            }
+        }
         public static void RemoveMatchMaking()
         {
              using (var packet = new Packet((int) ClientPackets.stopMatchMaking))

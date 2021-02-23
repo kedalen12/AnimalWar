@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class GamePLay
@@ -325,10 +326,30 @@ public class GamePLay
         public int deathCount = 0;
         public int killCount = 0;
         public float maxHp = 1000;
-        public int DeathTimer = 0;
+        public int DeathTimer = 5;
         public float currentHp = 1000;
         public GamePLay myGame;
+        private bool isDead;
 
+        async Task RespawnPlayer()
+        {
+            await Task.Delay(5000);
+            isDead = false;
+            SendRestore();
+        }
+
+        private void SendRestore()
+        {
+            /*
+             * Respawns the player
+             */
+
+            foreach (var player in myGame.myMatch.GetAllPlayers())
+            {
+                ServerSend.UpdatePlayerDeathState(PlayerId, player.GetPlayerId());
+            }
+            
+        }
         public InternalPlayerMethods(int team, int id, int champion, GamePLay myGame)
         {
             MyTeam = team;
@@ -362,12 +383,16 @@ public class GamePLay
         }
         public void TakeDamage(float value)
         {
+            if(isDead) return;
             if (currentHp - value <= 0)
             {
                 Die();
             }
-            currentHp -= value;
-            UpdateHealth();
+            else
+            {
+                currentHp -= value;
+                UpdateHealth();  
+            }
         }
         public void TakeDamage(bool trueDeath)
         {
@@ -376,9 +401,14 @@ public class GamePLay
 
         private void Die()
         {
-            DeathTimer = deathCount > 1 ?  5 * deathCount / 2 : 5;
+            if(isDead) return;
+            isDead = true;
+            /*DeathTimer = deathCount > 1 ?  5 * deathCount / 2 : 5;*/
             deathCount++;
             SendDeath();
+#pragma warning disable 4014
+            RespawnPlayer();
+#pragma warning restore 4014
         }
 
         private void SendDeath()

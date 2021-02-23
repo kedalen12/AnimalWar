@@ -6602,7 +6602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1100883111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6720,15 +6720,15 @@ MonoBehaviour:
   localsObj:
   - {fileID: 4989007632570302597, guid: 0d4295efdffbeef45b1fe6ebf6b37504, type: 3}
   - {fileID: 4989007632570302597, guid: 534d6b3a3953e81428851d0bf0b6a417, type: 3}
-  - {fileID: 3619747673602480170, guid: cee64b956be220448a5b4794ffdf27a8, type: 3}
+  - {fileID: 3619747673602480170, guid: 15f71038c52c3684bb08e095dba95c41, type: 3}
   teamMatesObj:
   - {fileID: 4989007632570302597, guid: 48ca5b8080f215846b0f08f0eb0d05b5, type: 3}
   - {fileID: 4989007632570302597, guid: 067d8c5cb97bbe64abc48bfb6d331e20, type: 3}
-  - {fileID: 4989007632570302597, guid: 52e0affd7134c5949955e216d2f142ad, type: 3}
+  - {fileID: 1182213169306170613, guid: dbf632d4a0d44f54fbe31f412dcef84c, type: 3}
   enemiesObj:
   - {fileID: 4989007632570302597, guid: 44de237a09db8bd4dae393c71823e275, type: 3}
   - {fileID: 4989007632570302597, guid: de9b73c4ac2eee04f9fa879f1aa522b5, type: 3}
-  - {fileID: 4989007632570302597, guid: 8dab84b1f9e377d4eb0e87b604af07e3, type: 3}
+  - {fileID: 1182213169306170613, guid: 6060171880b739b47bf1dba7dbf4e2ce, type: 3}
   localHpSlider: {fileID: 979498740}
   localHpText: {fileID: 1198424270}
   texts:

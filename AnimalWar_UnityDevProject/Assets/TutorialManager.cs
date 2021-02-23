@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,7 +49,7 @@ public class TutorialManager : MonoBehaviour
     {
         "Greetings Traveler this is the peak of serenity a place where brave souls like yourself come to train",
         "Oh Forget my manners my name is master FU, and I am your trainer",
-        "Move your character!",
+        "Move your character! press",
         "Attack the blue dummy by pressing RMB",
         "Defend from red dummy by pressing LMB",
         "Press F to use your inner power!",
@@ -60,6 +61,10 @@ public class TutorialManager : MonoBehaviour
 
     private void Awake()
     {
+        tutorialStrings[2] =
+            $"Move your character by pressing {Bindings.PlayerBinds.forward.ToString()} {Bindings.PlayerBinds.backwards.ToString()} {Bindings.PlayerBinds.left.ToString()} {Bindings.PlayerBinds.right.ToString()} {Bindings.PlayerBinds.jump.ToString()}";
+        tutorialStrings[5] =
+            $"Press {Bindings.PlayerBinds.ability.ToString()} to use your inner power!";
         Instance = this;
         WASDImage.SetActive(false);
         tutorialText.text = tutorialStrings[0];
@@ -67,11 +72,11 @@ public class TutorialManager : MonoBehaviour
         playerIsInRangeOfDummies += UpdateText;
         Invoke(nameof(UpdateText), 6.5f);
         Invoke(nameof(UpdateText), 16);
-        values.Add((int) KeyCode.W);
-        values.Add((int) KeyCode.A);
-        values.Add((int) KeyCode.S);
-        values.Add((int) KeyCode.D);
-        values.Add((int) KeyCode.Space);
+        values.Add((int) Bindings.PlayerBinds.forward);
+        values.Add((int) Bindings.PlayerBinds.left);
+        values.Add((int) Bindings.PlayerBinds.backwards);
+        values.Add((int) Bindings.PlayerBinds.right);
+        values.Add((int) Bindings.PlayerBinds.jump);
     }
     private void Update()
     {
@@ -113,34 +118,34 @@ public class TutorialManager : MonoBehaviour
             UpdateStage(TutorialStage.Defense);
         }
 
-        if (!Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.S) &&
-            !Input.GetKeyDown(KeyCode.D) && !Input.GetKeyDown(KeyCode.Space)) return;
+        if (!Input.GetKeyDown(Bindings.PlayerBinds.forward) && !Input.GetKeyDown(Bindings.PlayerBinds.left) && !Input.GetKeyDown(Bindings.PlayerBinds.backwards) &&
+            !Input.GetKeyDown(Bindings.PlayerBinds.right) && !Input.GetKeyDown(Bindings.PlayerBinds.jump)) return;
         KeyCode key;
         foreach (var t in values)
         {
             if (Input.GetKey((KeyCode) t))
             {
-                if ((KeyCode) t == KeyCode.A)
+                if ((KeyCode) t == Bindings.PlayerBinds.left)
                 {
                     aok.SetActive(true);
                 }
 
-                if ((KeyCode) t == KeyCode.W)
+                if ((KeyCode) t == Bindings.PlayerBinds.forward)
                 {
                     wok.SetActive(true);
                 }
 
-                if ((KeyCode) t == KeyCode.S)
+                if ((KeyCode) t == Bindings.PlayerBinds.backwards)
                 {
                     sok.SetActive(true);
                 }
 
-                if ((KeyCode) t == KeyCode.D)
+                if ((KeyCode) t == Bindings.PlayerBinds.right)
                 {
                     dok.SetActive(true);
                 }
 
-                if ((KeyCode) t == KeyCode.Space)
+                if ((KeyCode) t == Bindings.PlayerBinds.jump)
                 {
                     spaceok.SetActive(true);
                 }

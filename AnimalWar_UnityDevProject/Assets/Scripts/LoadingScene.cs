@@ -30,7 +30,7 @@ public partial class LoadingScene : MonoBehaviour
     private Vector3 SpawnPoint;
     public Text AlertText;
     public Text TimerTxt;
-    public int CurrentTime = 1500;
+    public float CurrentTime = 1500f;
     [Header("TopBar Red")]     public GameObject TeamRed;
     public Text ZonesRed;
      public Text DeathsRed;
@@ -75,7 +75,7 @@ public partial class LoadingScene : MonoBehaviour
 
     private void Timer()
     {
-            CurrentTime--;
+        CurrentTime -= Time.deltaTime;
         // ReSharper disable once PossibleLossOfFraction
         float minutes = Mathf.FloorToInt(CurrentTime / 60); 
         float seconds = Mathf.FloorToInt(CurrentTime % 60);
@@ -204,6 +204,7 @@ public partial class LoadingScene : MonoBehaviour
 
     private void Update()
     {
+        Timer();
         if (_spawnedModels == 6)
         {
             /*
@@ -282,7 +283,6 @@ public partial class LoadingScene : MonoBehaviour
         Manager.UpdateLocalPosition(SpawnPoint);
         SetPostproduction();
         Manager.SetDeathLocal();
-        Invoke("Respawn", deathTimer);
         if (MyTeam == 1)
         {
             DeathsRed.text = deathCount.ToString();
@@ -307,13 +307,21 @@ public partial class LoadingScene : MonoBehaviour
         }
     }
 
-    public void Respawn()
+    public void Respawn(int who)
     {
-        Manager.SetDeathLocal();
-        SetPostproduction();
+        if (who == ServerID)
+        {
+            Manager.SetDeathLocal();
+            SetPostproduction(); 
+        } else
+        {
+            Manager.ReActivateGameObject(who);
+        }
+
     }
     public void HandleTeamMateDeath(int whoToDie, float deathTimer, int deathCount)
     {
+        Manager.DeactivateGameObject(whoToDie);
         if (MyTeam == 1)
         {
             DeathsRed.text = deathCount.ToString();
@@ -326,6 +334,7 @@ public partial class LoadingScene : MonoBehaviour
 
     public void HandleEnemyDeath(int whoToDie, float deathTimer, int deathCount)
     {
+        Manager.DeactivateGameObject(whoToDie);
         if (MyTeam == 1)
         {
             DeathsRed.text = deathCount.ToString();
@@ -333,5 +342,6 @@ public partial class LoadingScene : MonoBehaviour
         else
         {
             DeathBlue.text = deathCount.ToString();
-        }    }
+        }    
+    }
 }

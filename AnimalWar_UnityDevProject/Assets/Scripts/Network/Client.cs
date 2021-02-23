@@ -88,7 +88,9 @@ public class Client : MonoBehaviour
             {(int) ServerPackets.setMatchEndResult, ClientHandle.SetMatchEndResult},
             {(int) ServerPackets.forceSceneLoad, ClientHandle.LoadSceneForce},
             {(int) ServerPackets.updateTutorialStage, ClientHandle.UpdateTutorialState},
-            {(int) ServerPackets.beginTutorial, ClientHandle.BeginTutorial}
+            {(int) ServerPackets.beginTutorial, ClientHandle.BeginTutorial},
+            {(int) ServerPackets.respawnPlayer, ClientHandle.RespawnPlayer},
+            {(int) ServerPackets.updateAnimation, ClientHandle.UpdateAnimation}
         };
         Debug.Log("Initialized packets.");
     }

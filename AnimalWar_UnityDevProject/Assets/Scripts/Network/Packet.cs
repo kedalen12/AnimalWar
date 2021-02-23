@@ -32,7 +32,9 @@ namespace Network
         setMatchEndResult,
         forceSceneLoad,
         updateTutorialStage,
-        beginTutorial
+        beginTutorial,
+        respawnPlayer,
+        updateAnimation
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -54,7 +56,8 @@ namespace Network
         enteredNeutralZone,
         enteredBeneficialZone,
         newTutorialStage,
-        damageDealt
+        damageDealt,
+        receiveAnimation
     }
 
 

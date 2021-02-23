@@ -31,7 +31,9 @@ public enum ServerPackets
     setMatchEndResult,
     forceSceneLoad,
     updateTutorialStage,
-    beginTutorial
+    beginTutorial,
+    respawnPlayer,
+    updateAnimation
 }
 
 /// <summary>Sent from client to server.</summary>
@@ -45,13 +47,16 @@ public enum ClientPackets
     startMatchMaking,
     stopMatchMaking,
     mmPopUpAnswer,
-    sceneLoaded, //THIS WILL BE SENT WHEN THE CLIENT HAS RECEIVED THE INFORMATION FOR ALL PLAYERS TO LET THE SERVER NOW IT CAN REMOVE THE LOADING CANVAS
+    sceneLoaded, //THIS WILL BE SENT WHEN THE CLIENT HAS RECEIVED THE INFORMATION FOR ALL PLAYERS TO LET THE SERVER NOW HE CAN REMOVE THE LOADING CANVAS
     notifyPickUpdate,
     notifyLobbyState,
     sceneCompleted,
     enteredConflictZone,
     enteredNeutralZone,
-    enteredBeneficialZone
+    enteredBeneficialZone,
+    newTutorialStage,
+    damageDealt,
+    receiveAnimation
 }
 
 

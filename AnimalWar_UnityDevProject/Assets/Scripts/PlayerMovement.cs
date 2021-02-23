@@ -50,16 +50,10 @@ public class PlayerMovement : MonoBehaviour
 // ReSharper disable Unity.PerformanceAnalysis
  private void Update()
  {
+  if(isDead) return;
   if(!canMove) return;
-  if (isDead)
-  {
-    Move(Vector2.zero);
-  }
-  else
-  {
-   _inputDir = GetInputs().normalized;
+  _inputDir = GetInputs().normalized;
    Move(_inputDir);
-  }
  }
 
  private void Move(Vector2 inputDir)

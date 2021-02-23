@@ -124,6 +124,7 @@ public class Server
                 {(int)ClientPackets.enteredConflictZone, ServerHandle.HandleGamePlayConflictZone},
                 {(int)ClientPackets.enteredNeutralZone, ServerHandle.HandleGamePlayConflictZone},
                 {(int)ClientPackets.enteredBeneficialZone, ServerHandle.HandleGamePlayConflictZone},
+                {(int)ClientPackets.receiveAnimation, ServerHandle.HandleAnimationUpdate},
             };
             ServerConsoleWriter.WriteLine("Initialized packets.");
         }

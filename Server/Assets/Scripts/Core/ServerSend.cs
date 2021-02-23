@@ -325,4 +325,35 @@ public class ServerSend
                 SendTcpData(toClient,packet);
             }         
         }
+
+        public static void UpdatePlayerDeathState(int playerId, int sendTo)
+        {
+            using (var packet = new Packet((int) ServerPackets.respawnPlayer))
+            {
+                packet.Write(playerId);
+                SendTcpData(sendTo,packet);
+            }                 
+        }
+
+        public static void SendAnimation(int fromclient, int animationToPlay, bool isRot, int sendTo)
+        {
+            using (var packet = new Packet((int) ServerPackets.updateAnimation))
+            {
+                packet.Write(fromclient);
+                packet.Write(animationToPlay);
+                packet.Write(isRot);
+                SendUdpData(sendTo,packet);
+            }       
+        }
+        public static void SendAnimation(int fromclient, int animationToPlay, Quaternion rot, bool isRot, int sendTo)
+        {
+            using (var packet = new Packet((int) ServerPackets.updateAnimation))
+            {
+                packet.Write(fromclient);
+                packet.Write(animationToPlay);
+                packet.Write(isRot);
+                packet.Write(rot);
+                SendUdpData(sendTo,packet);
+            }       
+        }
 }

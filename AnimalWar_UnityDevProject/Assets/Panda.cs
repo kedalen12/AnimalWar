@@ -30,6 +30,7 @@ public class Panda : MonoBehaviour
     //public Transform centerOfGfx;
     private bool UsingUltimate = false;
     private Vector3 ultimateTarget;
+    public Quaternion rotatie;
     public GameObject gfx;
     public GameObject fakeBamboo;
     public GameObject selfBamboo;
@@ -147,6 +148,7 @@ public class Panda : MonoBehaviour
     
     /*ORDER PRIORITY
      SHIELD - PUNCH - JUMPING - MOVING - EMOTE */
+    private KeyCode holdingCode;
     private void CheckInputs()
     {
         Debug.Log(_isPunching);
@@ -160,7 +162,7 @@ public class Panda : MonoBehaviour
 
         if (!isInUlti)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (Input.GetKeyDown(Bindings.PlayerBinds.ability))
             {
                 //myTarget.Active = true;
                 UseUltimate();
@@ -195,15 +197,14 @@ public class Panda : MonoBehaviour
                 {
                     pandaAnimator.SetBool("DoEmote", false);
                     Run(true);
-                }
-
-                if (Input.GetKeyUp(Bindings.PlayerBinds.forward) || Input.GetKeyUp(Bindings.PlayerBinds.backwards) ||
-                    Input.GetKeyUp(Bindings.PlayerBinds.left) || Input.GetKeyUp(Bindings.PlayerBinds.right))
+                } else if (Input.GetKeyUp(holdingCode))
                 {
                     Run(false);
+
                 }
             }
         }
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -226,7 +227,9 @@ public class Panda : MonoBehaviour
                 gfx.transform.eulerAngles = new Vector3(0, gfx.transform.eulerAngles.y, 0);
                 
                 pandaAnimator.SetInteger("UltiState", 1);
-                
+                ClientSend.SendAnimation(7, true, rot);
+
+
             }
             else
             {
@@ -235,11 +238,18 @@ public class Panda : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        holdingCode = Event.current.keyCode;
+
+    }
     private void UseUltimate()
     {
         isInUlti = true;
         myMovement.canMove = false; 
         pandaAnimator.SetInteger("UltiState", 0);
+        SendAnimation(5);
+
     }
 
     //public bool goToParent = false;
@@ -262,11 +272,30 @@ public class Panda : MonoBehaviour
     private void Run(bool value)
     {
         pandaAnimator.SetBool("Run", value);
+        SendAnimation(1);
     }
 
+    public void SendAnimation(int number)
+    {
+        /*
+ * 0 -> IDLE
+ * 1 -> RUN
+ * 2 -> JUMP
+ * 3 -> PUNCH
+ * 4 -> SHIELD
+ * 5 -> STARTULTI
+ * 6 -> ULTIIDLE
+ * 7 -> JUMPFROMULTI
+ * 8 -> STUNNED
+ */
+        ClientSend.SendAnimation(number, false);
+        
+    }
     private void Jump()
     {
         pandaAnimator.SetBool("Jump", true);
+        SendAnimation(2);
+
     }
 
     private void OnDrawGizmosSelected()
@@ -281,6 +310,8 @@ public class Panda : MonoBehaviour
         if(_isPunching) return;
         var what = Random.Range(0, 101);
         pandaAnimator.SetBool("Punch" , true);
+        SendAnimation(3);
+
         _isPunching = true;
     }
 
@@ -322,6 +353,8 @@ public class Panda : MonoBehaviour
     private void UseShield()
     {
         pandaAnimator.SetBool("Shield", true);
+        SendAnimation(4);
+
         shield.SetActive(true);
     }
 

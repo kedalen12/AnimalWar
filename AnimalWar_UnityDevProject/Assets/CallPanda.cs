@@ -35,7 +35,14 @@ public class CallPanda : MonoBehaviour
 
     public void EndShield()
     {
-        myPanda.EndShield();
+        if (myPanda != null)
+        {
+            myPanda.EndShield();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void HaltAnimator()

@@ -28,6 +28,7 @@ public partial class LoadingScene
         private int maxHpAssasin = 1000;
         private int maxHpTank = 1500;
         private int maxHpRanged = 800;
+        private List<int> overrideRotFor = new List<int>();
         private Dictionary<int, GameObject> _teamObjs = new Dictionary<int, GameObject>();
         private Dictionary<int, GameObject> _enemyObjs = new Dictionary<int, GameObject>();
         private Dictionary<int, HandlePlayerStats> _playerStats = new Dictionary<int, HandlePlayerStats>();
@@ -115,6 +116,27 @@ public partial class LoadingScene
             _teamObjs[Constants.ServerID].GetComponent<PlayerMovement>().SetDeathState();
         }
 
+        public void UpdateAnimation(int who, int what)
+        {
+            if (overrideRotFor.Contains(who))
+            {
+                overrideRotFor.Remove(who);
+            }
+
+            if (_teamObjs.ContainsKey(who))
+            {
+                if (_teamObjs[who].TryGetComponent<ExternalPanda>(out var externalPanda))
+                {
+                    externalPanda.PlayAnimation(what);
+                }
+            } else if (_enemyObjs.ContainsKey(who))
+            {
+                if (_enemyObjs[who].TryGetComponent<ExternalPanda>(out var externalPanda))
+                {
+                    externalPanda.PlayAnimation(what);
+                }
+            }
+        }
         public void Respawn()
         {
             
@@ -153,14 +175,20 @@ public partial class LoadingScene
             {
                 // Debug.Log("TEAMMATE !!!");
                 _teamObjs[whoToUpdate].transform.position = position;
-                _teamObjs[whoToUpdate].transform.rotation = rotation;
+                if (!overrideRotFor.Contains(whoToUpdate))
+                {
+                    _teamObjs[whoToUpdate].transform.rotation = rotation;
+                }
             }
             else
             {
                 // Debug.Log("ENEMY !!!");
 
                 _enemyObjs[whoToUpdate].transform.position = position;
-                _enemyObjs[whoToUpdate].transform.rotation = rotation;
+                if (!overrideRotFor.Contains(whoToUpdate))
+                {
+                    _enemyObjs[whoToUpdate].transform.rotation = rotation;
+                }
             }
             //Debug.Log("DONE");
         }
@@ -170,7 +198,46 @@ public partial class LoadingScene
             return _playerStats[playerId];
         }
 
+        public void ReActivateGameObject(int whoToDie)
+        {
+            if (_teamObjs.ContainsKey(whoToDie))
+            {
+                _teamObjs[whoToDie].SetActive(true);
+            } else if (_enemyObjs.ContainsKey(whoToDie))
+            {
+                _enemyObjs[whoToDie].SetActive(true);
+            }
+        }
+        public void DeactivateGameObject(int whoToDie)
+        {
+            if (_teamObjs.ContainsKey(whoToDie))
+            {
+                _teamObjs[whoToDie].SetActive(false);
+            } else if (_enemyObjs.ContainsKey(whoToDie))
+            {
+                _enemyObjs[whoToDie].SetActive(false);
+            }
+        }
 
-        
+        public void UpdateAnimationOvrrideMovement(int who, int what, Quaternion rot)
+        {
+            overrideRotFor.Add(who);
+            if (_teamObjs.ContainsKey(who))
+            {
+                if (_teamObjs[who].TryGetComponent<ExternalPanda>(out var externalPanda))
+                {
+                    externalPanda.PlayAnimation(what);
+                    _teamObjs[who].transform.rotation = rot;
+                }
+            } else if (_enemyObjs.ContainsKey(who))
+            {
+                if (_enemyObjs[who].TryGetComponent<ExternalPanda>(out var externalPanda))
+                {
+                    externalPanda.PlayAnimation(what);
+                    _enemyObjs[who].transform.rotation = rot;
+
+                }
+            }
+        }
     }
 }

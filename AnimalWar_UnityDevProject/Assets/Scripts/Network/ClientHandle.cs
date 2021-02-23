@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using Network;
 using UnityEngine;
@@ -7,6 +8,7 @@ using static Constants;
 using static MatchVariables;
 using static PlayerVariables;
 using static UIManager;
+using static UnityEngine.SceneManagement.SceneManager;
 
 public class ClientHandle
 {
@@ -311,5 +313,30 @@ public class ClientHandle
     public static void BeginTutorial(Packet _packet)
     {
         ExternalUIFunctions.GoToSceneStatic(5);
+    }
+
+    public static void RespawnPlayer(Packet _packet)
+    {
+        var whoToRespawn = _packet.ReadInt();
+        LoadingSceneScript.Respawn(whoToRespawn);
+
+    }
+
+    public static void UpdateAnimation(Packet _packet)
+    {
+        var whoToUpdate = _packet.ReadInt();
+        var animation = _packet.ReadInt();
+        if (_packet.ReadBool())
+        {
+            var rot = _packet.ReadQuaternion();
+            LoadingSceneScript.Manager.UpdateAnimationOvrrideMovement(whoToUpdate, animation, rot);
+
+            
+        }
+        else
+        {
+            LoadingSceneScript.Manager.UpdateAnimation(whoToUpdate, animation);
+
+        }
     }
 }

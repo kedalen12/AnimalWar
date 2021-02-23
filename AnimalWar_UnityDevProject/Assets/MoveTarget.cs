@@ -29,6 +29,10 @@ public class MoveTarget : MonoBehaviour
     }
     private void Update()
     {
+        if (_mainCam == null)
+        {
+            _mainCam = Camera.main;
+        }
         if (!(_mainCam is null)) _controller = _mainCam.GetComponent<CameraController>();
         _spriteRenderer.enabled = Active;
         if (!Active)  return;

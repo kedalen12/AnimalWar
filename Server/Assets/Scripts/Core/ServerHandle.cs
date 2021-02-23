@@ -46,6 +46,8 @@ public class ServerHandle
                 $"Tried to invite {toUserName} but this user was not online");
         }
     }
+    
+    
 
     public static void SendInviteAnswer(int fromClient, Packet packet)
     {
@@ -185,5 +187,31 @@ public class ServerHandle
         var zone = packet.ReadInt();
         Dictionaries.dictionaries.Matches[Dictionaries.dictionaries.PlayerDataHolders[fromclient].GetMatchId()].myGamePLay.SetCurrentPlayerZone(fromclient, zone);
     }
-    
+
+    public static void HandleAnimationUpdate(int fromclient, Packet packet)
+    {
+        var matchId = packet.ReadInt();
+        var animationToPlay = packet.ReadInt();
+        if (packet.ReadBool())
+        {
+            var rot = packet.ReadQuaternion();
+            foreach (var player in Dictionaries.dictionaries.Matches[matchId].GetAllPlayers())
+            {
+                if(player.GetPlayerId() == fromclient) continue;
+                ServerSend.SendAnimation(fromclient, animationToPlay, rot,true,player.GetPlayerId());
+            }
+        }
+        else
+        {
+            foreach (var player in Dictionaries.dictionaries.Matches[matchId].GetAllPlayers())
+            {
+                if(player.GetPlayerId() == fromclient) continue;
+                ServerSend.SendAnimation(fromclient, animationToPlay,false ,player.GetPlayerId());
+            } 
+        }
+
+    }
+
+
+
 }
