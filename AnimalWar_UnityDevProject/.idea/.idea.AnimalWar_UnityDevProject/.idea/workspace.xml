@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18935dd1-3b4f-4919-871c-b8f8788f7239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/CallPanda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CallPanda.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MoveTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoveTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Panda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Panda.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Characters/TestCharactersScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Characters/TestCharactersScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCrash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestCrash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AztecManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AztecManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Server.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Tests" color="Green" />
+    <fileColor scope="Local Unit Tests" color="Green" />
+    <fileColor scope="Android Instrumented Tests" color="Green" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/MoveTarget.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A555715E-F291-462E-B190-C2C939543F55/eb/70932dc3/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PunchCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/testtimer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CallPanda.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Panda.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7.5.3/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ExternalPanda.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TestMouseLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TargetCall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/testbutton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/portaltrigger.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LobbyManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Externals/XMLDataManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LoadingScene.cs" />
+      <option value="$PROJECT_DIR$/Assets/AztecManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PolyMesh.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MapManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/ZoneArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InGame/ZoneArea.cs" />
+      <option value="$PROJECT_DIR$/Assets/SkyMaster/Scripts/V3.0 Scripts/ParticleShadows/ParticleShadowsSM.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LobbyManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/DisableSelf.cs" />
+      <option value="$PROJECT_DIR$/Assets/testtimer.cs" />
+      <option value="$PROJECT_DIR$/Assets/PostMatchHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIObjects.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scenes/Tutorial/DisableZWrite.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scenes/Tutorial/Mask.shader" />
+      <option value="$PROJECT_DIR$/Assets/Scenes/Tutorial/Mask 1.shader" />
+      <option value="$PROJECT_DIR$/Assets/portaltrigger.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scenes/Characters/Character.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scenes/Characters/PlayerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/PunchCollider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LogoManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HandleAsync.cs" />
+      <option value="$PROJECT_DIR$/Assets/TutorialIntroduction.cs" />
+      <option value="$PROJECT_DIR$/Assets/TargetCall.cs" />
+      <option value="$PROJECT_DIR$/Assets/DummyLoop.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HandlePlayerStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Server/LookForGame.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/Tab/TabButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/Tab/TabGroup.cs" />
+      <option value="$PROJECT_DIR$/Assets/testbutton.cs" />
+      <option value="$PROJECT_DIR$/Assets/UserInfoPrefabHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" />
+      <option value="$PROJECT_DIR$/Assets/TutorialManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/TestMouseLock.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" />
+      <option value="$PROJECT_DIR$/Assets/MoveTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AztecManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CallPanda.cs" />
+      <option value="$PROJECT_DIR$/Assets/ExternalPanda.cs" />
+      <option value="$PROJECT_DIR$/Assets/Panda.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1nZnA2IHDIlGq68sGazhdBxMkj6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="dotNetConsole" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/SUPERBUILD\LTSHEREWEGO.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\kedalen\Desktop\SUPERBUILD" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18935dd1-3b4f-4919-871c-b8f8788f7239" name="Default Changelist" comment="" />
+      <created>1611606342200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611606342200</updated>
+      <workItem from="1611606399133" duration="5016000" />
+      <workItem from="1611625575930" duration="6503000" />
+      <workItem from="1611787319946" duration="159000" />
+      <workItem from="1611787536630" duration="613000" />
+      <workItem from="1611788183779" duration="1825000" />
+      <workItem from="1611798111809" duration="4927000" />
+      <workItem from="1611869427418" duration="337000" />
+      <workItem from="1611872875219" duration="10812000" />
+      <workItem from="1611952537942" duration="46000" />
+      <workItem from="1611957126111" duration="957000" />
+      <workItem from="1611967441187" duration="3316000" />
+      <workItem from="1612046972695" duration="437000" />
+      <workItem from="1612054610514" duration="180000" />
+      <workItem from="1612055292483" duration="117000" />
+      <workItem from="1612056984554" duration="8271000" />
+      <workItem from="1612097371492" duration="1464000" />
+      <workItem from="1612102905489" duration="2634000" />
+      <workItem from="1612110502211" duration="1700000" />
+      <workItem from="1612127392671" duration="5541000" />
+      <workItem from="1612134316864" duration="3306000" />
+      <workItem from="1612222663420" duration="2642000" />
+      <workItem from="1612384433599" duration="6758000" />
+      <workItem from="1612473908635" duration="6703000" />
+      <workItem from="1612553971588" duration="22093000" />
+      <workItem from="1612701801314" duration="1706000" />
+      <workItem from="1612709430578" duration="689000" />
+      <workItem from="1612729900796" duration="474000" />
+      <workItem from="1612731694555" duration="2598000" />
+      <workItem from="1612914319199" duration="1830000" />
+      <workItem from="1613080115143" duration="20913000" />
+      <workItem from="1613235549629" duration="18515000" />
+      <workItem from="1613307858217" duration="8111000" />
+      <workItem from="1613343160121" duration="1552000" />
+      <workItem from="1613348771195" duration="2692000" />
+      <workItem from="1613401908864" duration="922000" />
+      <workItem from="1613530449559" duration="678000" />
+      <workItem from="1613590922254" duration="6407000" />
+      <workItem from="1613598659065" duration="16058000" />
+      <workItem from="1613765674013" duration="25000" />
+      <workItem from="1613766825880" duration="5142000" />
+      <workItem from="1613828357183" duration="52171000" />
+      <workItem from="1613947601420" duration="1076000" />
+      <workItem from="1613955934062" duration="7307000" />
+      <workItem from="1614037399298" duration="10820000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
