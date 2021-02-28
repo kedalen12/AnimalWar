@@ -2,40 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33ff0d68-c848-45a4-b97c-b8178d82290f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/CallPanda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/CallPanda.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/MoveTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/MoveTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Panda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Panda.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/Panda.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/Panda.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Characters/TestCharactersScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Characters/TestCharactersScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/MayaMapDeprectaded.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/MayaMapDeprectaded.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/TestCrash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/TestCrash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Tutorial/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Tutorial/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/AztecManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/AztecManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/LoadingScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/LoadingScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Matches/GamePLay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Matches/GamePLay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Welcome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Welcome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Externals/XMLDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Externals/XMLDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialInfo/UI/Fruit-Ninja-Replica-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialInfo/UI/Meteoritos.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialInfo/UI/aruqqmivngj61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialInfo/UI/carbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/TutorialInfo/UI/drive-download-20210225T152825Z-001.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +108,7 @@
       <workItem from="1613769165906" duration="2000" />
       <workItem from="1613769176198" duration="641000" />
       <workItem from="1614039000621" duration="5781000" />
+      <workItem from="1614465550579" duration="602000" />
     </task>
     <servers />
   </component>

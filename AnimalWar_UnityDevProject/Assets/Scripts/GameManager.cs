@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("-> Logged in -> " + Constants.IsLogged);
         if(Constants.IsLogged){
            UIManager.AllowLogin();
+           musicSource.gameObject.SetActive(true);
+           musicSource.enabled = true;
+           musicSource.Play();
         }
         Debug.Log($"User is : {Constants.SysetmUser}");
     }

@@ -213,12 +213,7 @@ public class XMLDataManager : MonoBehaviour
         }
         public void DocumentHandler()
         {
-                if (!File.Exists(Constants.FilePath))
-                {
-                    GenerateNewFile();
-                    return;
-                }
-
+            Debug.Log("Setting Up");
                 //ReadsXML And Applies 
                 var readMasterVolume = (float) _foundDocument.Descendants("MasterVolume").FirstOrDefault();
                 var readMusicVolume = (float) _foundDocument.Descendants("MusicVolume").FirstOrDefault();
@@ -239,6 +234,8 @@ public class XMLDataManager : MonoBehaviour
                 var readDropValue = (int) _foundDocument.Descendants("ResDropDownValue").FirstOrDefault();
                 DropDownValue = readDropValue;
                 //Apply Data
+                Debug.Log($"Set Music Volume is {readMusicVolume}");
+
                 manager.SetMasterVolumeXml(readMasterVolume);
                 manager.SetAmbientVolumeXml(readAmbientVolume);
                 manager.SetMusicVolumeXml(readMusicVolume);

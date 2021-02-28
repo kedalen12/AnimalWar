@@ -55,9 +55,9 @@ namespace Player
         private Resolution[] _resolutions;
         
 
-        public void Start()
-        {
-            PopulateResolutionDropDown();
+        public void Start(){
+            
+        PopulateResolutionDropDown();
         }
 
         public void ReEvaluateTabs()
@@ -568,26 +568,27 @@ namespace Player
 
         public void SetMasterVolumeXml(float value)
         {
+            masterVolumeSlider.value = value;
+
             masterMixer.SetFloat("MasterVolume", Mathf.Log10(value)*20);
-            masterVolumeSlider.value = Mathf.Log10(value) * 20;
         }
 
         public void SetMusicVolumeXml(float value)
         {
-            musicMixer.audioMixer.SetFloat("MusicVolume", Mathf.Log10(value)*20);
-            musicVolumeSlider.value = Mathf.Log10(value) * 20;
+            musicVolumeSlider.value = value;
+            musicMixer.audioMixer.SetFloat("MusicVolume", value);
         }
 
         public void SetSfxVolumeXml(float value)
         {
+            sfxVolumeSlider.value = value;
             sfxMixer.audioMixer.SetFloat("SFXVolume", Mathf.Log10(value)*20);
-            sfxVolumeSlider.value = Mathf.Log10(value) * 20;
         }
 
         public void SetAmbientVolumeXml(float value)
         {
+            ambientVolumeSlider.value = value;
             ambientMixer.audioMixer.SetFloat("AmbienceVolume",Mathf.Log10(value)*20);
-            ambientVolumeSlider.value = Mathf.Log10(value) * 20;
             
         }
 

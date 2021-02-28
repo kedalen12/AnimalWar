@@ -5,40 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18935dd1-3b4f-4919-871c-b8f8788f7239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CallPanda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CallPanda.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoveTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoveTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Panda.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Panda.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/ENEMIES/ENEMY_PANDA.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/EXTERNAL/TEAMMATE/TEAM_PANDA.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA ALL ANIMATIONS IN ONE/PandaAnimationsAllAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Panda.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/PANDA/Textures/PandaMat.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/Panda_Local.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Characters/TestCharactersScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Characters/TestCharactersScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestCrash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestCrash.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AztecManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AztecManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Welcome.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Welcome.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Externals/XMLDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Externals/XMLDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/UI/Fruit-Ninja-Replica-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/UI/Meteoritos.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/UI/aruqqmivngj61.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/UI/carbon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/UI/drive-download-20210225T152825Z-001.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +58,7 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LobbyManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Externals/XMLDataManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LoadingScene.cs" />
       <option value="$PROJECT_DIR$/Assets/AztecManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PolyMesh.cs" />
@@ -103,7 +79,6 @@
       <option value="$PROJECT_DIR$/Assets/Scenes/Characters/PlayerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/PunchCollider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LogoManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HandleAsync.cs" />
       <option value="$PROJECT_DIR$/Assets/TutorialIntroduction.cs" />
@@ -130,6 +105,10 @@
       <option value="$PROJECT_DIR$/Assets/CallPanda.cs" />
       <option value="$PROJECT_DIR$/Assets/ExternalPanda.cs" />
       <option value="$PROJECT_DIR$/Assets/Panda.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Externals/XMLDataManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nZnA2IHDIlGq68sGazhdBxMkj6" />
@@ -229,6 +208,7 @@
       <workItem from="1613947601420" duration="1076000" />
       <workItem from="1613955934062" duration="7307000" />
       <workItem from="1614037399298" duration="10820000" />
+      <workItem from="1614463407212" duration="2525000" />
     </task>
     <servers />
   </component>

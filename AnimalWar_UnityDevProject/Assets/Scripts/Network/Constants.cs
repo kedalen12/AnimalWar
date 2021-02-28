@@ -7,7 +7,7 @@ public class Constants
     public const string WebServer = "127.0.0.1/sqlconnect/";
     public static string Inviter;
     public static readonly string SysetmUser = Environment.UserName;
-    public static string FilePath = $@"C:\Users\{SysetmUser}\Documents\AnimalWars\Settings";
+    public static string FilePath = $@"C:\Users\{SysetmUser}\Documents\AnimalWars\Settings.xml";
     public static bool InParty = false;
     public static bool IsLogged = false;
     public static int DbId { get; set; }
